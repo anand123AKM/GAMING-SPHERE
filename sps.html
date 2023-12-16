@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STONE-PAPER-SCISSOR</title>
+    <link rel="stylesheet" href="sps.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>Rock Paper Scissor </h1>
+        </div>
+        <div class="result">
+
+            <div>
+                <h3>Your Score : </h3>
+                <h3 id="myscore">0</h3>
+            </div>
+
+            <div>
+                <h3>AI Score : </h3>
+                <h3 id="comScore">0</h3>
+            </div>
+        </div>
+
+        <div class="game">
+            <div>
+                <h3>AI : </h3>
+                <img id="comp" alt="">
+            </div>
+            <div>
+                <h3>You : </h3>
+                <img id="user" alt="">
+            </div>
+        </div>
+        <br>
+
+        <span>
+            <h3>Result : <h3 id="result"></h3>
+        
+
+        </span>
+        <div class="img">
+            <img onclick="myFun1()" src="rock.png" alt="">
+            <img onclick="myFun2()" src="paper.png" alt=""  >
+            <img onclick="myFun3()" src="scissor.png" alt="">
+
+        </div>
+
+    </div>
+
+    <script src="sps.js"></script>
+
+</body>
+
+</html>
