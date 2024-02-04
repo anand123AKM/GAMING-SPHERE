@@ -2,28 +2,30 @@ var rows = 3;
 var columns = 3;
 
 var currTile;
-var otherTile; 
+var otherTile; //blank tile
 
 var turns = 0;
 
-
+// var imgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var imgOrder = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
 
 window.onload = function () {
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
-          
+            //<img id="0-0" src="1.jpg">
             let tile = document.createElement("img");
             tile.id = r.toString() + "-" + c.toString();
             tile.src = imgOrder.shift() + ".jpg";
 
-      
-            tile.addEventListener("touchstart", startEvent);
+            // Add both touch and mouse events
             tile.addEventListener("mousedown", startEvent);
-            tile.addEventListener("touchmove", moveEvent);
+            tile.addEventListener("touchstart", startEvent);
+
             tile.addEventListener("mousemove", moveEvent);
-            tile.addEventListener("touchend", endEvent);
+            tile.addEventListener("touchmove", moveEvent);
+
             tile.addEventListener("mouseup", endEvent);
+            tile.addEventListener("touchend", endEvent);
 
             document.getElementById("board").append(tile);
         }
@@ -31,16 +33,20 @@ window.onload = function () {
 }
 
 function startEvent(e) {
-    currTile = this; 
+    currTile = this; // this refers to the img tile being touched or clicked
 }
 
 function moveEvent(e) {
-    e.preventDefault();
+    e.preventDefault(); // prevent scrolling
 }
 
 function endEvent(e) {
+    if (e.changedTouches) {
+        e.clientX = e.changedTouches[0].clientX;
+        e.clientY = e.changedTouches[0].clientY;
+    }
+
     otherTile = document.elementFromPoint(e.clientX, e.clientY);
-   
 
     if (otherTile.tagName === "IMG") {
         if (!otherTile.src.includes("3.jpg")) {
@@ -74,6 +80,3 @@ function endEvent(e) {
         }
     }
 }
-
-
-
