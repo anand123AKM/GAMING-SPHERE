@@ -1438,7 +1438,7 @@ section {
 }
 
 .b1t {
-  width: 15%;
+    width: 120px;
   margin: 20px;
   padding: 5px;
   font: 1em sans-serif;
