@@ -1446,6 +1446,7 @@ section {
       font: 1em sans-serif;
       font-weight: bold;
       color: rgb(254, 254, 254);
+        border: 1px solid rgb(141, 84, 40);
       background-color: rgb(141, 84, 40);
     }
   }
@@ -1476,6 +1477,8 @@ section {
   display: inline-block;
   padding: 5px;
   font: 1em sans-serif;
+    border: 1px solid rgb(141, 84, 40);
+
   font-weight: bold;
   color: rgb(254, 254, 254);
   background-color: rgb(141, 84, 40);
