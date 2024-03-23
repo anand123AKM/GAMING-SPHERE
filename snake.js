@@ -165,4 +165,3 @@ function handleInput(key) {
       break;
   }
 }
-
