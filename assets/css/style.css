@@ -1381,7 +1381,12 @@ section {
 .sgd1 {
   text-align: center;
   margin: 20px;
-  font-weight: bold
+  font-weight: bold;
+}
+@media screen and (min-width:800px) {
+  .hide1 {
+      display: none;
+    }
 }
 
 @media screen and (max-width:800px) {
@@ -1416,7 +1421,50 @@ section {
       color: rgb(254, 254, 254);
       background-color: red;
     }
+    .hide{
+      display: none;
+    }
+    .mar{
+      margin: 0px;
+    }
+    .mar1{
+      margin: 0px;
+    }
   }
+
+.mar{
+  height:260px;
+   width: 280px;
+    overflow: hidden;
+    border: 25px solid #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3); 
+}
+
+.mar1{
+  height: 250px;
+    width: 280px;
+    overflow: hidden;
+    border: 23px solid rgb(172, 207, 247);
+    padding: 10px;
+    box-shadow: 0 4px 7px rgba(23, 104, 185, 0.3);
+}
+
+.abs11 {
+  width: 150px;
+  padding: 7px;
+  color: rgb(252, 252, 253);
+  border: 3px solid white;
+  background-color: rgb(40, 16, 147);
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 25px;
+  display: inline-block;
+  box-shadow: 0 0 5px 3px rgba(53, 41, 145, 0.5), 0 0 10px 6px rgba(0, 14, 95, 0.5), 0 0 15px 10px rgba(85, 102, 170, 0.5);
+}
+
+.abs11 {
+  text-align: center;
+}
 
 
 .abs {
