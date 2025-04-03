@@ -12,7 +12,13 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="/styles/main.css">
 
-
+  <meta name="theme-color" content="#000" />
+    <meta
+      name="description"
+      content="Your ultimate gaming community platform"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="logo.png" />
 
 
 
@@ -385,7 +391,23 @@ The Stone-Paper-Scissors game, also known as Rock-Paper-Scissors, is a simple ha
 
 
 
-
+ <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            })
+            .catch((error) => {
+              console.log("ServiceWorker registration failed: ", error);
+            });
+        });
+      }
+    </script>
 
 
 
