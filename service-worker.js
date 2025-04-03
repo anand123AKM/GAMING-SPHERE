@@ -2,8 +2,6 @@ const CACHE_NAME = "gaming-sphere-cache-v1";
 const urlsToCache = [
   "/",
   "/index.html",
-  "/static/css/main.css",
-  "/static/js/main.js",
   "/manifest.json",
   // Add other important assets to cache
 ];
